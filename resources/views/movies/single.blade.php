@@ -81,6 +81,7 @@
                         <p>{{ $comment->comment_content }}</p>
                     </div>
                 @endforeach
+                @auth
                 <form action="{{ route('storecomment') }}" method="POST">
                     @csrf
                     <div class="post-comment-wrapper">
@@ -90,6 +91,7 @@
                         <button class="btn btn-primary" value="Reply">Post Comment</button>
                     </div>
                 </form>
+                @endauth
             </div>
             <br />
             <h2 class="section-title">Similar Movies</h2>
