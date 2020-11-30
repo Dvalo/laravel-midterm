@@ -4,7 +4,7 @@
 
     <div class="container section-container">
         <div class="popular-genres">
-            <h2 class="section-title">Popular Directors</h2>
+            <h2 class="section-title">Popular Genres</h2>
             <div class="actor-wrapper grid-display">
                 @foreach ($genres as $genre)
                     <a href="{{ route('displaymoviebygenre',["id"=>$genre->id, "genre"=>str_slug($genre->gen_title)]) }}" style="text-decoration: none;">
